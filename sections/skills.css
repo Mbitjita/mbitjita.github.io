@@ -1,0 +1,28 @@
+.skills{
+    background-color: var(--primary);
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    max-width: 1440px;
+    padding: 60px 20px;
+    padding-bottom: 90px;
+    margin: auto;
+}
+
+.my-skills{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    flex-wrap: wrap;           
+}
+
+.skill-icon{
+    flex: 0 1 1;
+    max-width: 100%;
+    height: auto;
+}
+

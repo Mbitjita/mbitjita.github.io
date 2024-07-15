@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import url('/sections/header.css');
+@import url('/sections/hero.css');
+@import url('/sections/about.css');
+@import url('/sections/experience.css');
+@import url('/sections/skills.css');
+@import url('/sections/footer.css');
+
+:root{
+    --primary: #433539;
+    --primary-light: #5A494E;
+    --secondary: #5D4D48;
+    --secondary-light: #69695E;
+
+    /* Grey for skills logos, social icons and message box */
+    --grey: #9E9E9E;
+    --grey-light: #D9D9D9;
+
+    --white: #fff;
+    --white-dark: #f4f4f4;
+
+    /* Footer */
+    --dark: #252525;
+
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+

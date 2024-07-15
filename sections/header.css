@@ -1,0 +1,145 @@
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1440px;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+}
+
+.nav ul .button {
+    background-color: var(--primary);
+    transition: .4s ease;
+    scroll-behavior: smooth;
+
+    &:hover{
+        background-color: var(--primary-light);
+    }
+
+    &:active{
+        transition: transform 0.1s ease;
+    }
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 8px;
+    transition: .4s ease;
+    scroll-behavior: smooth;
+
+    &:hover{
+        font-weight: 800;
+    }
+
+    &:active{
+        transition: transform 0.1s ease;
+    }
+}
+
+.mobile-toggle {
+    display: none;
+    color: var(--white);
+    padding: 10px;
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: flex-start;
+        position: relative; /* Add this to ensure relative positioning */
+    }
+
+    .mobile-toggle {
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 999; /* Ensure it's above other content */
+    }
+
+    .logo {
+        width: 100px;
+        margin-top: 0;
+    }
+
+    .nav {
+        display: none; /* Hide the nav by default */
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 55%;
+        max-width: 300px; /* Adjust as needed */
+        height: 218px;
+        background-color: var(--primary);
+        border-radius: 10px;
+        transition: all 0.4s ease;
+    }
+
+    .nav.open {
+        display: block; /* Display the nav when open */
+    }
+
+    .nav ul {
+        display: block;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .nav ul .button {
+        background-color: white;
+        color: var(--primary);
+    }
+
+    .nav ul li {
+        width: 95%;
+        padding-bottom: 10px;
+    }
+
+    .nav ul li a {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #close {
+        display: none; /* Hide the close button by default */
+    }
+
+    .nav.open ~ #close {
+        display: inline-block; /* Show close button when nav is open */
+    }
+
+    .nav.open ~ #open {
+        display: none; /* Hide open button when nav is open */
+    }
+}
